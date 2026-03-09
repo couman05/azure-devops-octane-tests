@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_couman05_azure_devops_octane_tests_1773056041662-push-trigger-input-set
+  identifier: Build_couman05_azure_devops_octane_tests_1773056041662pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_couman05_azure_devops_octane_tests_1773056041662
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
