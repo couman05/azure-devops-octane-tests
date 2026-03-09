@@ -53,5 +53,4 @@ pipeline:
         type: Webhook
         spec:
           webhookUrl: https://webhook.site/704c5031-4463-4667-9202-5a9adef2b31c
-          executeOnDelegate: true
       enabled: true
