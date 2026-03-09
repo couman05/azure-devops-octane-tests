@@ -35,13 +35,26 @@ pipeline:
                   spec:
                     shell: Sh
                     command: echo "test pipeline"
+              - step:
+                  type: Run
+                  name: Run Maven Tests
+                  identifier: Run_Maven_Tests
+                  spec:
+                    shell: Sh
+                    command: mvn test
+                    reports:
+                      type: JUnit
+                      spec:
+                        paths:
+                          - target/surefire-reports/*.xml
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
+        description: ""
   notificationRules:
     - name: notification_rule
       identifier: notification_rule
