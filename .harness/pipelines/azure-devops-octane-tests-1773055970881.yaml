@@ -21,11 +21,20 @@ pipeline:
             steps:
               - step:
                   identifier: echo
-                  name: echo
+                  name: echo hello world
                   spec:
-                    command: echo hello world
+                    shell: Sh
+                    command: echo "Hello from Harness CI"
                   timeout: ""
                   type: Run
+                  description: Example Run Step
+              - step:
+                  type: Run
+                  name: echo test pipeline
+                  identifier: echo_test_pipeline
+                  spec:
+                    shell: Sh
+                    command: echo "test pipeline"
           platform:
             arch: Amd64
             os: Linux
