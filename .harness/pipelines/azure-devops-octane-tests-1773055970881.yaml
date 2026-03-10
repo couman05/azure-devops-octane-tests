@@ -59,7 +59,7 @@ pipeline:
                   identifier: print_account_variable
                   spec:
                     shell: Sh
-                    command: "echo \"Account variable value: <+account.variables.dummy_variable>\""
+                    command: "echo \"Account variable value: <+variable.account.dummy_variable>>\""
           platform:
             os: Linux
             arch: Amd64
