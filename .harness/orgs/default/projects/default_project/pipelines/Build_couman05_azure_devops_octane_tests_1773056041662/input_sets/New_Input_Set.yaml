@@ -1,0 +1,15 @@
+inputSet:
+  name: New Input Set
+  identifier: New_Input_Set
+  description: Dummy input set description
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_couman05_azure_devops_octane_tests_1773056041662
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: master
