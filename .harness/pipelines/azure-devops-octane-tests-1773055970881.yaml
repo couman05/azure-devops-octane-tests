@@ -9,7 +9,7 @@ pipeline:
       value: Hello from static pipeline variable
     - name: runtime_message
       type: String
-      value: <+input>.default("Hello from default runtime message").allowedValues("Hello","Hi","Greetings")
+      value: <+input>.default("Hello").allowedValues("Hello","Hi","Greetings")
   properties:
     ci:
       codebase:
