@@ -3,6 +3,13 @@ pipeline:
   name: Build azure-devops-octane-tests
   orgIdentifier: default
   projectIdentifier: default_project
+  variables:
+    - name: static_message
+      type: String
+      value: Hello from static pipeline variable
+    - name: runtime_message
+      type: String
+      value: <+input>
   properties:
     ci:
       codebase:
@@ -60,6 +67,15 @@ pipeline:
                   spec:
                     shell: Sh
                     command: "echo \"Account variable value: <+variable.account.dummy_variable>\""
+              - step:
+                  type: Run
+                  name: Print Pipeline Variables
+                  identifier: print_pipeline_variables
+                  spec:
+                    shell: Sh
+                    command: |
+                      echo "Static variable: <+pipeline.variables.static_message>"
+                      echo "Runtime variable: <+pipeline.variables.runtime_message>"
           platform:
             os: Linux
             arch: Amd64
