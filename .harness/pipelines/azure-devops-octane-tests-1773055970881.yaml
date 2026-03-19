@@ -106,11 +106,9 @@ pipeline:
     - name: notification_rule
       identifier: notification_rule
       pipelineEvents:
-        - type: PipelineStart
-        - type: PipelineEnd
-        - type: PipelineSuccess
+        - type: AllEvents
       notificationMethod:
         type: Webhook
         spec:
-          webhookUrl: https://webhook.site/704c5031-4463-4667-9202-5a9adef2b31c
+          webhookUrl: https://webhook.site/613da59b-85be-45e8-8ef4-15e1b7fdbefd
       enabled: true
