@@ -76,6 +76,14 @@ pipeline:
                     command: |
                       echo "Static variable: <+pipeline.variables.static_message>"
                       echo "Runtime variable: <+pipeline.variables.runtime_message>"
+              - step:
+                  type: GCSUpload
+                  name: Upload To GCS
+                  identifier: Upload_To_GCS
+                  spec:
+                    connectorRef: account.gcp_connector
+                    bucket: harness-second-bucket
+                    sourcePath: target/surefire-reports/*.xml
           platform:
             os: Linux
             arch: Amd64
@@ -96,5 +104,3 @@ pipeline:
         spec:
           webhookUrl: https://webhook.site/704c5031-4463-4667-9202-5a9adef2b31c
       enabled: true
-
-      
