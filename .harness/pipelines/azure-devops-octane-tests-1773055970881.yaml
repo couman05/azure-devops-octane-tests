@@ -84,6 +84,16 @@ pipeline:
                     connectorRef: account.gcp_connector
                     bucket: harness-second-bucket
                     sourcePath: target/surefire-reports/*.xml
+              - step:
+                  type: Plugin
+                  name: Publish artifact URL
+                  identifier: Publish_artifact_URL
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: plugins/artifact-metadata-publisher
+                    settings:
+                      file_urls: https://storage.googleapis.com/harness-second-bucket/TEST-MF.simple.tests.AppTest.xml
+                  description: Publish artifact URL to Harness Artifacts Tab
           platform:
             os: Linux
             arch: Amd64
