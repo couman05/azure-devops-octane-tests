@@ -110,5 +110,8 @@ pipeline:
       notificationMethod:
         type: Webhook
         spec:
-          webhookUrl: https://webhook.site/613da59b-85be-45e8-8ef4-15e1b7fdbefd
+          webhookUrl: https://smee.io/ktEwwJW6RdVhL8j
+          headers:
+            ALM-OCTANE-TECH-PREVIEW: "true"
+            Authorization: Bearer ew0KICAidmVyc2lvbiIgOiAiYnR2MSINCn0%3D.V1%3AXcSGkiRwNLWkPfdojSe2b5YJrrFBp3SKdjpTm%2FI5rZWc8syE%2F59j7AWq5AF4Zchc9Q%2B147a7m%2FsxGMz70YXcpPHMJks6vlC%2BHROqNjmlx17zS0ek%2Bx0CFiKz51z%2F1KS9XhnazQ%2FFcXphL9gYVhXFjoEErNpXQ5Qh6JnLICehLLZs6Zq1cD1VZ%2FE4NfuxuUEVPsGgGG5glRRb5FkeaA0EAkBoVBtnzPYMoTPqs1kpL4bQLUu5C37klDqrdKBKwXa7vAdWSrdx%2FmM5k5yGHec3lan1BUqnMu%2BfXCqVovyb0Fw4ENU9%2Bt7w2pD8E0ryAvNW3Zjvihdz51BIg0G%2BfC0zehW0ezw%2B6a59zNd0raRi1PRNQOPWLRS8zx6UCntapHp2rtL3bWUymcWIUUvY4LKGJLSTJWrB611a%2F0Dt1aur0sxg%2Fy1ixdPE52nY6LIoAngD1vK0Rc5WLdQ%3D
       enabled: true
