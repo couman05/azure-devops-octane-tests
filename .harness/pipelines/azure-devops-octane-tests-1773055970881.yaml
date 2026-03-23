@@ -54,12 +54,6 @@ pipeline:
                       spec:
                         paths:
                           - target/surefire-reports/*.xml
-                  failureStrategies:
-                    - onFailure:
-                        errors:
-                          - AllErrors
-                        action:
-                          type: Ignore
               - step:
                   type: Run
                   name: Print Account Variable
