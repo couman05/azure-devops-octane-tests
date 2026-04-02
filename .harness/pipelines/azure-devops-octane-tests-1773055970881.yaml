@@ -96,6 +96,12 @@ pipeline:
             spec: {}
         type: CI
         description: ""
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: Ignore
   notificationRules:
     - name: notification_rule
       identifier: notification_rule
