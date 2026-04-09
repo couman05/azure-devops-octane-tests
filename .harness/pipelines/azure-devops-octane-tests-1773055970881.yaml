@@ -70,24 +70,6 @@ pipeline:
                     command: |
                       echo "Static variable: <+pipeline.variables.static_message>"
                       echo "Runtime variable: <+pipeline.variables.runtime_message>"
-              - step:
-                  type: GCSUpload
-                  name: Upload To GCS
-                  identifier: Upload_To_GCS
-                  spec:
-                    connectorRef: account.gcp_connector
-                    bucket: harness-second-bucket
-                    sourcePath: target/surefire-reports/*.xml
-              - step:
-                  type: Plugin
-                  name: Publish artifact URL
-                  identifier: Publish_artifact_URL
-                  spec:
-                    connectorRef: account.harnessImage
-                    image: plugins/artifact-metadata-publisher
-                    settings:
-                      file_urls: https://storage.googleapis.com/harness-second-bucket/TEST-MF.simple.tests.AppTest.xml
-                  description: Publish artifact URL to Harness Artifacts Tab
           platform:
             os: Linux
             arch: Amd64
@@ -102,6 +84,42 @@ pipeline:
                 - AllErrors
               action:
                 type: Ignore
+    - stage:
+        name: second_build
+        identifier: second_build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          execution:
+            steps:
+              - step:
+                  type: GCSUpload
+                  name: upload to gcs
+                  identifier: upload_to_gcs
+                  spec:
+                    connectorRef: account.gcp_connector
+                    bucket: harness-second-bucket
+                    sourcePath: target/surefire-reports/*.xml
+              - step:
+                  type: Plugin
+                  name: publish artifact url
+                  identifier: publish_artifact_url
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: plugins/artifact-metadata-publisher
+                  description: Publish Artifact URL to Harness Artifacts Tab
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
   notificationRules:
     - name: notification_rule
       identifier: notification_rule
