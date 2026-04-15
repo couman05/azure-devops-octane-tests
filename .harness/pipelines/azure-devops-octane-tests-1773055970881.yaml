@@ -44,18 +44,6 @@ pipeline:
                     command: echo "test pipeline"
               - step:
                   type: Run
-                  name: Run Maven Tests
-                  identifier: Run_Maven_Tests
-                  spec:
-                    shell: Sh
-                    command: mvn test
-                    reports:
-                      type: JUnit
-                      spec:
-                        paths:
-                          - target/surefire-reports/*.xml
-              - step:
-                  type: Run
                   name: Print Account Variable
                   identifier: print_account_variable
                   spec:
@@ -99,6 +87,19 @@ pipeline:
           execution:
             steps:
               - step:
+                  type: Run
+                  name: Run Maven tests
+                  identifier: Run_Maven_tests
+                  spec:
+                    shell: Sh
+                    command: mvn test
+                    reports:
+                      type: JUnit
+                      spec:
+                        paths:
+                          - target/surefire-reports/*.xml
+                contextType: Pipeline
+              - step:
                   type: GCSUpload
                   name: upload to gcs
                   identifier: upload_to_gcs
@@ -106,6 +107,7 @@ pipeline:
                     connectorRef: account.gcp_connector
                     bucket: harness-second-bucket
                     sourcePath: target/surefire-reports/*.xml
+                contextType: Pipeline
               - step:
                   type: Plugin
                   name: publish artifact url
