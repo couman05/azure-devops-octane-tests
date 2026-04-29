@@ -141,3 +141,8 @@ pipeline:
             ALM-OCTANE-TECH-PREVIEW: "true"
             Authorization: Bearer ew0KICAidmVyc2lvbiIgOiAiYnR2MSINCn0%3D.V1%3AJPGaNh0w4c%2F2WoZWroHMZX0U6hPNfXFsTh3HukfZc3hYd6O8q3cWJahsVw72nOzVQ3ZJ7BlB0AxbMqD4ACnCWeq%2B15zzCq4o2jJsr5j8%2BiApFAaq6C12c5%2FSI6xyc%2Bs64QZhPJXU%2FqOpcD7q8W%2FHlyklAxU%2F8XkcBwyiJECBwGP%2BjSIpy9dmUVsP3g5oVG9ZMx%2BG2EKsP0WUqk9o%2Be%2Fgd9FNjQhqq2y4TEbDX6D2q8FyKMDB0IjFK2%2FKpN23b%2FBf%2BBMSeY%2FkCCoatL9xRysPaomgfwvHQMdv9j1NDfBm09NfiSk6JqC4HtxvCPSnhwpA1U3LVJAjfLmEBtSFajvXq021GUjn4d6M%2B35yrQotIuU95OKW3h4kwCWVAl2Fu5rDCQz6Ucs7R8hLHLdI9CnSWHZGH1uZ2mUXj2vU4PvzDPtggTjbEQdZp0tZ786b7kxamhMNmqav4DFqOA%3D%3D
       enabled: true
+      template:
+        versionLabel: v1
+        templateRef: enriched_webhook_notification
+        orgIdentifier: default
+        projectIdentifier: default_project
