@@ -139,10 +139,5 @@ pipeline:
           webhookUrl: https://smee.io/arueT3sm5krEdnt
           headers:
             ALM-OCTANE-TECH-PREVIEW: "true"
-            Authorization: Bearer ew0KICAidmVyc2lvbiIgOiAiYnR2MSINCn0%3D.V1%3AJPGaNh0w4c%2F2WoZWroHMZX0U6hPNfXFsTh3HukfZc3hYd6O8q3cWJahsVw72nOzVQ3ZJ7BlB0AxbMqD4ACnCWeq%2B15zzCq4o2jJsr5j8%2BiApFAaq6C12c5%2FSI6xyc%2Bs64QZhPJXU%2FqOpcD7q8W%2FHlyklAxU%2F8XkcBwyiJECBwGP%2BjSIpy9dmUVsP3g5oVG9ZMx%2BG2EKsP0WUqk9o%2Be%2Fgd9FNjQhqq2y4TEbDX6D2q8FyKMDB0IjFK2%2FKpN23b%2FBf%2BBMSeY%2FkCCoatL9xRysPaomgfwvHQMdv9j1NDfBm09NfiSk6JqC4HtxvCPSnhwpA1U3LVJAjfLmEBtSFajvXq021GUjn4d6M%2B35yrQotIuU95OKW3h4kwCWVAl2Fu5rDCQz6Ucs7R8hLHLdI9CnSWHZGH1uZ2mUXj2vU4PvzDPtggTjbEQdZp0tZ786b7kxamhMNmqav4DFqOA%3D%3D
+            Authorization: Bearer ew0KICAidmVyc2lvbiIgOiAiYnR2MSINCn0%3D.V1%3Ah%2FI0%2F0%2BSYTJwruSD%2BN%2F3YJyzShoBPSW2h%2FTPpViuBsm%2Bi8L%2BHp0i%2F2RSswKNC1A4w2mcs2qSq1UEpQTxHU75tzqzqNkDIbifAKfASxwaWPZRSltmhjpZ9pOvGGIZp%2Blv0xfm9yG%2F5w%2B3IUnH%2BgrOiwTiW2qm4i0Ks%2BCW04NR6kN8NwwjcgaC6IN0eKJ1Z%2B97XUVKjisCKbToiKBa5UKmrBeTYAbfT9osxkkPt5SeZqDmmiAYGxxDBRNkHjQPA9eFfPpsA5WjnPNx7OKb5kILyxdFRjZcHNAVoeNI%2Ft1BzXisnZy1Rr7XzmvcaDasHxels6DbOUROZ2pTVAK7Cz7EDkc1m%2B4l%2BPHNb9oZ7U5AAEn8uJZ0zEHhbWNj4pT9K5xUkS2lBpIM2m2vljW0swcRKoWmhaXA%2FaXHNzOkk%2B9c%2B0Oun2OQYpWIC0nz0iEEbEAUb5H0FhoCQZo%3D
       enabled: true
-      template:
-        versionLabel: v1
-        templateRef: enriched_webhook_notification
-        orgIdentifier: default
-        projectIdentifier: default_project
