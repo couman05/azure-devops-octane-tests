@@ -98,12 +98,6 @@ pipeline:
                       spec:
                         paths:
                           - target/surefire-reports/*.xml
-                  failureStrategies:
-                    - onFailure:
-                        errors:
-                          - AllErrors
-                        action:
-                          type: Ignore
                 contextType: Pipeline
               - step:
                   type: GCSUpload
